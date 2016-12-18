@@ -1,0 +1,26 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ttrk.css">
+</head>
+<body onload="myFunction()">
+<input id="starttask" type="text" list="mytasks" placeholder="Name of task">
+<datalist id="mytasks">
+  <option value="Check email" selected="selected">
+  <option value="Working on tickets">
+</datalist> 
+<button id="runtime" type="submit" onclick="myTime()">Start</button>
+<p id="demo">Click to start the timer!</p>
+<div style="color:red;font-family: verdana;font-size: 300%;" id="clock"></div>
+<div class="tasks" id="tasks"></div>
+<button type="button" onclick="clearTasks()">Clear tasks</button>
+<div id="myCanvas" style="position:absolute;"></div>
+<div id="editor" hidden="true">
+<p>Here's your chance to edit the text for this task.<br></p>
+<input id="lasttask" type="text" list="mytasks" placeholder="Name of task" value="">
+<button id="edit" type="submit" onclick="editTasks()">Start</button>
+<p>Or, delete it:</p>
+<button type="button" onclick="removeTasks()"><img src="del.png"></button>
+</div>
+<script src="ttrk.js"></script>
+</body>
+</html>
